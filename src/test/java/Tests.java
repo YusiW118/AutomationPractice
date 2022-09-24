@@ -1,10 +1,13 @@
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
 
 import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.runners.MethodSorters;
 import org.openqa.selenium.WebDriver;
 
 import driver.DriverSingleton;
@@ -13,7 +16,8 @@ import pages.HomePage;
 import pages.SignInPage;
 import utilities.Constants;
 import utilities.FrameworkProperties;
-
+/* The testcases will be run according to their name */
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Tests {
     static FrameworkProperties frameworkProperties;
     static WebDriver driver;
@@ -33,7 +37,7 @@ public class Tests {
 
 
     @Test
-    public void testingAuthentication() throws IOException{
+    public void test01Authentication() throws IOException{
         driver.get(Constants.URL);
         homePage.clickSignIn();
         signInPage.login(frameworkProperties.getProperty(Constants.EMAIL), frameworkProperties.getProperty(Constants.PASSWORD));
@@ -41,7 +45,7 @@ public class Tests {
     }
 
     @Test
-    public void testingAddingThingsToCart(){
+    public void test02AddingThingsToCart(){
         driver.get(Constants.URL);
         homePage.addFirstElement();
         homePage.addSecondElement();
@@ -50,7 +54,7 @@ public class Tests {
     }
 
     @Test
-    public void testingTheFullBuyingProgress() throws IOException{
+    public void test03TheFullBuyingProgress() throws IOException{
         driver.get(Constants.URL);
         homePage.addFirstElement();
         homePage.addSecondElement();

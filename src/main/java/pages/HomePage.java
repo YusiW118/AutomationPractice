@@ -47,6 +47,27 @@ public class HomePage {
     @FindBy(css="#header > div.nav > div > div > nav > div:nth-child(1) > a > span")
     private WebElement username;
 
+    @FindBy(id="search_query_top")
+    private WebElement searchBar;
+
+    @FindBy(css="#searchbox > button")
+    private WebElement searchButton;
+
+    @FindBy(css="#center_column > ul > li > div > div.left-block > div > a.product_img_link > img")
+    private WebElement searchResult;
+
+    public Boolean searchElement(String elements){
+        searchBar.sendKeys(elements);
+        searchButton.click();
+        try{
+            if(searchResult.isEnabled())
+            return true;
+
+        }catch(Exception e){
+            return false;
+        }
+        return false;
+    }
 
     public void clickSignIn(){
         WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(Constants.TimeOut));
