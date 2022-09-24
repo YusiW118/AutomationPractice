@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import driver.DriverSingleton;
 import utilities.Constants;
+import utilities.Utils;
 
 public class HomePage {
     private WebDriver driver;
@@ -91,6 +92,7 @@ public class HomePage {
             System.out.println("Cart has been added");
         }else{
             System.out.println("Cart has not been added");
+            Utils.takeScreenshot();
         }
         
     }
