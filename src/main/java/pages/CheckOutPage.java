@@ -4,6 +4,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -61,15 +62,15 @@ public class CheckOutPage {
     }
 
     public void confirmAddress(){
-        WebDriverWait wait= new WebDriverWait(driver, Duration.ofSeconds(Constants.TimeOut));
-        wait.until(ExpectedConditions.elementToBeClickable(checkout2));
-
+        Actions hover = new Actions(driver);
+        hover.moveToElement(checkout2).build().perform();
         checkout2.click();
     }
     public void confirmShipping(){
-        WebDriverWait wait= new WebDriverWait(driver,Duration.ofSeconds( Constants.TimeOut));
-        wait.until(ExpectedConditions.elementToBeClickable(checkService));
+        Actions hover = new Actions(driver);
+        hover.moveToElement(checkService).build().perform();
         checkService.click();
+        hover.moveToElement(checkout3).build().perform();
         checkout3.click();
     }
 
