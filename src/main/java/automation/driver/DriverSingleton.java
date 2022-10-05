@@ -1,4 +1,4 @@
-package driver;
+package automation.driver;
 
 import java.util.concurrent.TimeUnit;
 

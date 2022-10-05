@@ -1,26 +1,29 @@
-package utilities;
+package automation.utilities;
+
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
+
+@PropertySource("classpath:/framework.properties")
 @Component
-@PropertySource("framework.properties")
 public class ConfigurationProperties {
     
     @Value("${browser}")
     private String browser;
 
     @Value("${email}")
-    private String email;
+     private String email;
 
     @Value("${password}")
-    private String password;
+     private String password;
 
-    @Value("${username}")
-    private String username;
+    @Value("${username3}")
+     private String username3;
 
     public String getBrowser() {
+        System.out.println(this.browser);
         return browser;
     }
 
@@ -32,8 +35,9 @@ public class ConfigurationProperties {
         return password;
     }
 
-    public String getUsername() {
-        return username;
+    
+    public String getUsername3() {
+        return username3;
     }
 
     public void setBrowser(String browser) {
@@ -48,8 +52,8 @@ public class ConfigurationProperties {
         this.password = password;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUsernam3(String username) {
+        this.username3 = username;
     }
 
 

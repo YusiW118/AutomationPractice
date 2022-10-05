@@ -1,6 +1,6 @@
-package driver;
+package automation.driver;
 
-import utilities.Constants;
+import automation.utilities.Constants;
 public class DriverStrategyImplementer {
 	public static int valor=0;
 	

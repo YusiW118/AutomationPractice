@@ -1,5 +1,4 @@
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 
 import java.io.IOException;
 
@@ -10,12 +9,12 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import org.openqa.selenium.WebDriver;
 
-import driver.DriverSingleton;
-import pages.CheckOutPage;
-import pages.HomePage;
-import pages.SignInPage;
-import utilities.Constants;
-import utilities.FrameworkProperties;
+import automation.driver.DriverSingleton;
+import automation.pages.CheckOutPage;
+import automation.pages.HomePage;
+import automation.pages.SignInPage;
+import automation.utilities.Constants;
+import automation.utilities.FrameworkProperties;
 /* The testcases will be run according to their name */
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class Tests {

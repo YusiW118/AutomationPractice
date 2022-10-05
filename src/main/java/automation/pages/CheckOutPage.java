@@ -1,4 +1,4 @@
-package pages;
+package automation.pages;
 
 import java.time.Duration;
 
@@ -10,8 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import driver.DriverSingleton;
-import utilities.Constants;
+import automation.driver.DriverSingleton;
+import automation.utilities.Constants;
 
 public class CheckOutPage {
     private WebDriver driver;

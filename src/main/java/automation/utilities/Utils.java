@@ -1,4 +1,4 @@
-package utilities;
+package automation.utilities;
 
 import java.io.File;
 import java.io.IOException;
@@ -9,7 +9,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.springframework.util.FileCopyUtils;
 
-import driver.DriverSingleton;
+import automation.driver.DriverSingleton;
 
 public class Utils {
     

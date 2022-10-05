@@ -10,12 +10,12 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 
-import driver.DriverSingleton;
-import pages.CheckOutPage;
-import pages.HomePage;
-import pages.SignInPage;
-import utilities.Constants;
-import utilities.FrameworkProperties;
+import automation.driver.DriverSingleton;
+import automation.pages.CheckOutPage;
+import automation.pages.HomePage;
+import automation.pages.SignInPage;
+import automation.utilities.Constants;
+import automation.utilities.FrameworkProperties;
 
 
 @RunWith(Parameterized.class)

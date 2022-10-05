@@ -1,25 +1,37 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>AutomationPractice</groupId>
-  <artifactId>AutomationPractice</artifactId>
+  <parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.7.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+  <groupId>automation</groupId>
+  <artifactId>automation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Practice</name>
   <description>Automationpractice web</description>
-  
+  <properties>
+		<java.version>17</java.version>
+	</properties>
     <dependencies>
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+<!-- https://mvnrepository.com/artifact/junit/junit -->
+<dependency>
+    <groupId>junit</groupId>
+    <artifactId>junit</artifactId>
+    <scope>test</scope>
+</dependency>
     
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
-    <version>4.4.0</version>
-</dependency>
+    </dependency>
     <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-server</artifactId>
@@ -30,21 +42,24 @@
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-core</artifactId>
-    <version>5.3.22</version>
-</dependency>
+    </dependency>
 
     <!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-context</artifactId>
-    <version>5.3.22</version>
-</dependency>
-
-<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+    </dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-beans -->
 <dependency>
     <groupId>org.springframework</groupId>
-    <artifactId>spring-context</artifactId>
-    <version>5.3.22</version>
+    <artifactId>spring-beans</artifactId>
+    </dependency>
+
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-test</artifactId>
+    <scope>test</scope>
 </dependency>
 
     <dependency>
@@ -52,5 +67,49 @@
       <artifactId>guava</artifactId>
       <version>31.0.1-jre</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-test</artifactId>
+    <scope>test</scope>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-junit</artifactId>
+    <version>7.8.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+<dependency>
+	<groupId>io.cucumber</groupId>
+	<artifactId>cucumber-java</artifactId>
+	<version>7.8.0</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-spring -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-spring</artifactId>
+    <version>7.8.0</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-spring -->
+
+
+<!-- https://mvnrepository.com/artifact/org.junit.vintage/junit-vintage-engine -->
+<dependency>
+    <groupId>org.junit.vintage</groupId>
+    <artifactId>junit-vintage-engine</artifactId>
+    <scope>test</scope>
+</dependency>
   </dependencies>
+
+  <build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 </project>

@@ -1,4 +1,4 @@
-package pages;
+package automation.pages;
 
 import java.io.IOException;
 
@@ -8,10 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import driver.DriverSingleton;
-import utilities.Constants;
-import utilities.FrameworkProperties;
-import utilities.Utils;
+import automation.driver.DriverSingleton;
+import automation.utilities.Constants;
+import automation.utilities.FrameworkProperties;
+import automation.utilities.Utils;
 
 public class SignInPage{
 
