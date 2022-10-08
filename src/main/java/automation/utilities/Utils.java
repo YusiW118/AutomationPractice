@@ -12,7 +12,7 @@ import org.springframework.util.FileCopyUtils;
 import automation.driver.DriverSingleton;
 
 public class Utils {
-    
+    public static int testCount=0;
     public static String decode64(String encodedStr){
         Base64.Decoder decoder= Base64.getDecoder();
         return new String(decoder.decode(encodedStr.getBytes()));

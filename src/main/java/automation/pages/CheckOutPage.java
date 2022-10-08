@@ -29,7 +29,7 @@ public class CheckOutPage {
     @FindBy(css="head > title")
     private WebElement title;
     
-    @FindBy(css="#center_column > form > p > button > span")
+    @FindBy(css="#center_column > form > p > button")
     private WebElement checkout2;
 
     @FindBy(id="cgv")
